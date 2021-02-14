@@ -1,18 +1,22 @@
 const fs = require('fs');
+const moment = require('moment');
 
-
-// NOTE: Handle error stacks.
-module.exports = function catchError(timeStamp, message, err) {
-    var errLog = './error-logs';
-    var fileName = 'log';
-    var errorMessage = `${timeStamp} --> ${message}, \n ${err}`;
-    console.error(errorHandling.errMsg.underline.red);
-    if (!fs.existsSync(errLog)) {
-      fs.mkdirSync(errLog);
+// NOTE: Handle error stacks & messages.
+module.exports = function catchError(message, errorStack) {
+    const errorLog = './error-logs';
+    const fileName = 'error-log';
+    const errorTime = moment().format('YYYY-MM-DD');
+    const errorMessage = `$\n Error: ${message},  \n Stack: ${errorStack} `;
+    
+    console.error(errorMessage.red);
+    if (!fs.existsSync(errorLog)) {
+      fs.mkdirSync(errorLog);
     }
-    fs.appendFile(`${errLog}/${fileName}.txt`, errorMessage, 'utf8', function(err) {
+    fs.appendFile(`${errorLog}/${fileName}.txt`, errorMessage, 'utf8', function(err) {
       if (err) {
-        console.log('error!! -->'.underline.red, err);
+        console.error('Error: '.red,  'Stack: ',  err, ` - ${errorTime}`);
       }
     });
   }
+
+

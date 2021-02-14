@@ -4,28 +4,30 @@
    "description": "Error log handler lite / light weight package",
    "main": "app.js",
    "scripts": {
-     "test": "echo test command not set | exit code 0"
+      "test": "echo test command not set | exit code 0"
    },
    "repository": {
-     "url": "git://github.com/brandonv98/log-lite.git"
+      "url": "git://github.com/brandonv98/log-lite.git"
    },
    "keywords": [
-     "package",
-     "error",
-     "logging",
-     "vc-lib",
-     "vc-library",
-     "fs",
-     "nodeJS"
+      "package",
+      "error",
+      "logging",
+      "vc-lib",
+      "vc-library",
+      "fs",
+      "nodeJS"
    ],
    "author": "Brandon VanCamp",
    "license": "MIT",
    "bugs": {
-     "url": "https://github.com/brandonv98/log-lite/issues"
+      "url": "https://github.com/brandonv98/log-lite/issues"
    },
    "wiki": {
       "url": "https://github.com/brandonv98/log-lite/wiki"
-    },
-   "homepage": "https://github.com/brandonv98/log-lite#readme"
- }
- 
+   },
+   "homepage": "https://github.com/brandonv98/log-lite#readme",
+   "dependencies": {
+      "moment": "^2.29.1"
+   }
+}
