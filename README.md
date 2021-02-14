@@ -1,14 +1,30 @@
-# log-lite
- Lite error handler
+# Error Logging Lite
+Light weight error handler package library
 
-## Install 
+### Install
+Use the package manager [npm](https://npmjs.com) to install foobar.
 
-1. In your root project directory open your terminal:
-```$ touch .npmrc```
+1. Configure project `.npmrc` file by appending the following into the file.
+- `registry=https://npm.pkg.github.com/brandonv98`
 
-- Open `.npmrc` file and add 
-```registry=https://npm.pkg.github.com/brandonv98```
+```bash
+$ npm install @brandonv98/log-lite@1.0.0
+```
 
-2. Back in our terminal install the package with the following:
-```$ npm i log-lite```
+*Install via package.json:*
+```"@brandonv98/log-lite": "1.0.0"```
 
+
+### Usage
+```js
+const logLite = require('log-lite');
+
+logLite('Error message', 'errorStack', 'timeStamps'); 
+// return error messege, then create error dir & file("error-log"); appends error message, stack trace, and timestamps to file. 
+```
+
+### Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+#### License
+- MIT [License](./license)
