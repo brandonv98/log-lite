@@ -1,6 +1,6 @@
 {
    "name": "@brandonv98/log-lite",
-   "version": "1.0.0",
+   "version": "2.0.0",
    "description": "Error log handler lite / light weight package",
    "main": "app.js",
    "scripts": {
